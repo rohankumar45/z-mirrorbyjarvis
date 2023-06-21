@@ -60,7 +60,7 @@ if DATABASE_URL:
 
 UPSTREAM_REPO = environ.get('UPSTREAM_REPO', '')
 if len(UPSTREAM_REPO) == 0:
-    UPSTREAM_REPO = 'https://gitlab.com/Dawn-India/Z-Mirror'
+    UPSTREAM_REPO = 'https://rohankumar45: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@github.com/rohankumar45/z-mirrorbyjarvis.git'
 
 UPSTREAM_BRANCH = environ.get('UPSTREAM_BRANCH', '')
 if len(UPSTREAM_BRANCH) == 0:
