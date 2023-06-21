@@ -739,8 +739,8 @@ button_name button_url
 ```
 Example:
 ```
-Owner https://telegram.me/z_mirror
-Updates https://telegram.me/z_mirror
+Owner https://t.me/supastrikas7
+Updates https://t.me/supastrikas7
 ```
 - **Note**: If you want to add space in button name use `_` for add space
 

@@ -117,8 +117,8 @@ def get_progress_bar_string(pct):
         pct = float(pct.strip('%'))
     p = min(max(pct, 0), 100)
     cFull = int(p // 10)
-    p_str = '▓' * cFull
-    p_str += '░' * (10 - cFull)
+    p_str = '✦' * cFull
+    p_str += '✧' * (10 - cFull)
     return f"{p_str}"
 
 
@@ -379,8 +379,8 @@ def checking_access(user_id, button=None):
         user_data[user_id].update(data)
         if button is None:
             button = ButtonMaker()
-        button.ubutton('Get New Token', short_url(f'https://telegram.me/{bot_name}?start={token}'))
-        return 'Your <b>Token</b> is expired. Get a new one.', button
+        button.ubutton('Start', short_url(f'https://telegram.me/{bot_name}?start={token}'))
+        return 'start bot', button
     return None, button
 
 

@@ -110,14 +110,14 @@ async def start(_, message):
         userid = message.from_user.id
         input_token = message.command[1]
         if userid not in user_data:
-            return await sendMessage(message, 'This token is not yours!\n\nKindly generate your own.')
+            return await sendMessage(message, 'This is not yours!\n\nKindly start from your link.')
         data = user_data[userid]
         if 'token' not in data or data['token'] != input_token:
-            return await sendMessage(message, 'Token already used!\n\nKindly generate a new one.')
+            return await sendMessage(message, 'already used!\n\nKindly start bot.')
         data['token'] = str(uuid4())
         data['time'] = time()
         user_data[userid].update(data)
-        msg = 'Token refreshed successfully!\n\n'
+        msg = 'start refreshed successfully!\n\n'
         msg += f'Validity: {get_readable_time(int(config_dict["TOKEN_TIMEOUT"]))}'
         return await sendMessage(message, msg)
     elif config_dict['DM_MODE']:
@@ -126,7 +126,7 @@ async def start(_, message):
                        'Use me here: @skgaming9313'
     else:
         start_string = 'Sorry, you cant use me here!\n' \
-                       'Join @Z_Mirror to use me.\n' \
+                       'Join @skgaming9313 to use me.\n' \
                        'Thank You'
     await sendMessage(message, start_string)
 
