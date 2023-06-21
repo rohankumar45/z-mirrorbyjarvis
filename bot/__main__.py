@@ -117,7 +117,7 @@ async def start(_, message):
         data['token'] = str(uuid4())
         data['time'] = time()
         user_data[userid].update(data)
-        msg = 'start refreshed successfully!\n\n'
+        msg = 'refreshed successfully!\n\n'
         msg += f'Validity: {get_readable_time(int(config_dict["TOKEN_TIMEOUT"]))}'
         return await sendMessage(message, msg)
     elif config_dict['DM_MODE']:
